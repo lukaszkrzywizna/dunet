@@ -69,7 +69,7 @@ using System.Globalization;
 
 static string GetActualArea() => Divide() switch
 {{
-    Option<double>.Some some => some.Value.ToString(CultureInfo.InvariantCulture),
+    Option<double>.Some some => some.Value.ToString(),
     Option<double>.None none => ""Error: division by zero."",
     _ => throw new System.InvalidOperationException(),
 }};
